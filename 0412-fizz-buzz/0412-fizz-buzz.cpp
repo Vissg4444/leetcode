@@ -8,9 +8,9 @@ vector<string> fizzBuzz(int n)
    {
         if ( i % 3 == 0 and i % 5 == 0 )
             out[i - 1] = "FizzBuzz";
-        else if (i % 3 == 0 and i % 5 != 0)
+        else if (i % 3 == 0)
             out[i - 1] = "Fizz";
-        else if (i % 3 != 0 and i % 5 == 0)
+        else if (i % 5 == 0)
             out[i - 1] = "Buzz";
         else
          out[i - 1] = to_string(i);
