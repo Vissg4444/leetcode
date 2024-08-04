@@ -14,7 +14,7 @@ public:
         }
         sort(subarray.begin(), subarray.end());
         for (; left <= right; left++) {
-            sum += subarray[left] % 1000000007;
+            sum = (sum + subarray[left]) % 1000000007;
         }
         return sum;
     }
