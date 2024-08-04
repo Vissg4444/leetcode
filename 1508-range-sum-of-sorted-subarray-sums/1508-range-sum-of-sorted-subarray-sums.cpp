@@ -13,8 +13,9 @@ public:
             }
         }
         sort(subarray.begin(), subarray.end());
+        const int mod = 1e9 + 7;
         for (; left <= right; left++) {
-            sum = (sum + subarray[left]) % 1000000007;
+            sum = (sum + subarray[left]) % (mod);
         }
         return sum;
     }
