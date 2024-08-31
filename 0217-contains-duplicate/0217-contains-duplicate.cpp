@@ -5,7 +5,7 @@ public:
         for(int i : nums)
         {
             dict[i]++;
-            if (dict[i] > 1)
+            if (dict[i] >= 1)
                 return true;
         }
         
