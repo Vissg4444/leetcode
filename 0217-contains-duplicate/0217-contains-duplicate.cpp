@@ -2,10 +2,10 @@ class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
         map<int, int> dict;
-        for(int i : nums)
+        for(int i = 0; i < size(nums); i++)
         {
-            dict[i]++;
-            if (dict[i] > 1)
+            dict[nums[i]]++;
+            if (dict[nums[i]] > 1)
                 return true;
         }
         
