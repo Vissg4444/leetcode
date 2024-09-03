@@ -1,25 +1,21 @@
 class Solution {
 public:
-    int getLucky(string s, int k) {
-        int sum = 0, num;
-        string alphabet = "abcdefghijklmnopqrstuvwxyz";
-        if (k)
+    int getLucky(string s, int k) 
+    {
+        string num = "";
+        for ( char i : s)
         {
-            for (char i : s) 
-            {
-                if (alphabet.find(i) != std::string::npos)
-                    num = (int)i - 96;
-                else
-                    num = int(i) - '0';
-                while (num != 0) 
-                {
-                    sum += num % 10;
-                    num /= 10;
-                }
-            }
-            return getLucky(to_string(sum), k-1);
+            num += i - 'a' + 1;
         }
-        else
-            return stoi(s);
+        for(; k > 0; k--)
+        {
+            int temp_sum = 0;
+            for ( char i : num)
+            {
+                temp_sum += i - '0';
+            }
+            num = sum;
+        }
+        return num;
     }
 };
