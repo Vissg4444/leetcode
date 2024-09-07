@@ -2,15 +2,14 @@ class Solution {
 public:
     int duplicateNumbersXOR(vector<int>& nums) {
         int result = 0;
-        map <int, int> m;
-        for(int i : nums)
+        vector<char> v(51, 0);
+        for(char num : nums)
         {
-            m[i]++;
-            if (m[i] == 2)
-                {
-                    result ^= i;
-                    m.erase(i);
-                }
+            v[num]++;
+            if(v[num] == 2)
+            {
+                result ^= num;
+            }
         }
         return result;
     }
