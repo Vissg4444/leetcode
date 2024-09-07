@@ -6,9 +6,6 @@ public:
         for(int i : nums)
         {
             m[i]++;
-        }
-        for(int i : nums)
-        {
             if (m[i] == 2)
                 {
                     result ^= i;
