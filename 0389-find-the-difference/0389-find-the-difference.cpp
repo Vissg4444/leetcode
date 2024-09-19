@@ -6,9 +6,9 @@ public:
         {
             s_sum += c;
         }
-        for(char ch : t)
+        for(char c : t)
         {
-            t_sum += ch;
+            t_sum += c;
         }
         return char(t_sum - s_sum);
     }
