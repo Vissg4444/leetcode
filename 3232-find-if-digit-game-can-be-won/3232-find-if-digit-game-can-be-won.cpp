@@ -6,15 +6,13 @@ public:
         {
             if (num < 10)
                 {
-                    single -= num;
-                    doubl += num;
+                    single += num;
                 }
             else
                 {
-                    single += num;
-                    doubl -= num;
+                    doubl += num;
                 }
         }
-        return single > 0 or doubl > 0;
+        return single != doubl ;
     }
 };
