@@ -1,26 +1,26 @@
 class Solution {
 public:
-    int trap(vector<int>& height) { // O(n) memory solution
-        int len = height.size(), out = 0;
-        if (len == 0)
-            return 0;
-        vector<int> maxL(len,0), maxR(len,0);
-        for(int i = 1, maximum = 0; i < len; i++)
+    int trap(vector<int>& height) { // O(1) memory solution
+    int out = 0;
+    if (!height.size())
+        return 0;
+    for(int L = 0, R = height.size() - 1, maxL = height[L], maxR = height[R], sum = 0;L < R;)
+    {
+        if(maxL < maxR)
         {
-            maximum = max(maximum, height[i - 1]);
-            maxL[i] = maximum;
+            L++;
+            maxL = max(maxL, height[L]);
+            sum = min(maxL,maxR) - height[L];
         }
-        for(int i = len - 2, maximum = 0; i >= 0; i--)
+        else
         {
-            maximum = max(maximum, height[i + 1]);
-            maxR[i] = maximum;
+            R--;
+            maxR = max(maxR, height[R]);
+            sum = min(maxL,maxR) - height[R];
         }
-        for(int i = 0; i < len; i++)
-        {
-            int sum = min(maxL[i],maxR[i]) - height[i];
-            if (sum > 0)
-                out += sum;
-        }
-        return out;
+        if( sum > 0)
+            out += sum;
+    }
+    return out;
     }
 };
