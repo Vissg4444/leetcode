@@ -21,7 +21,6 @@ public:
             out = found.second;
             l = mid + 1;
             }
-            if (found.first == timestamp) return vec[mid].second;
             else if (found.first > timestamp)
                 r = mid - 1;
         }
