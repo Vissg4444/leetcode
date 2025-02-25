@@ -10,7 +10,7 @@ public:
     
     string get(string key, int timestamp) {
         //binary search
-        auto &vec = hash[key];
+        const vector<pair<int, string>> &vec = hash[key];
         pair<int, string> m_recent{0,""};
         int l = 0, r = vec.size() - 1;
         while ( l <= r)
