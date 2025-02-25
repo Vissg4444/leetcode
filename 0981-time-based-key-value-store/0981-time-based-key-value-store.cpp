@@ -4,14 +4,13 @@ public:
     map<string, vector<pair<int, string>>> hash;
     void set(string key, string value, int timestamp) {
         //append in hashmap
-        pair<int, string> temp = {timestamp, value};
-        hash[key].push_back(temp);
+        hash[key].push_back({timestamp, value});
     }
     
     string get(string key, int timestamp) {
         //binary search
         auto &vec = hash[key];
-        pair<int, string> m_recent{0,""};
+        string out = "";
         int l = 0, r = vec.size() - 1;
         while ( l <= r)
         {
@@ -19,7 +18,7 @@ public:
             pair<int, string> found = vec[mid];
             if (found.first <= timestamp) 
             {
-            m_recent = found;
+            out = found.second;
             l = mid + 1;
             }
             if (found.first == timestamp) return vec[mid].second;
@@ -27,6 +26,6 @@ public:
                 r = mid - 1;
         }
 
-        return m_recent.second; //closest
+        return out; //closest
     }
 };
