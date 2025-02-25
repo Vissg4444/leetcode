@@ -4,7 +4,7 @@ public:
     map<string, vector<pair<int, string>>> hash;
     void set(string key, string value, int timestamp) {
         //append in hashmap
-        hash[key].push_back({timestamp, value});
+        hash[key].emplace_back(timestamp, value);
     }
     
     string get(string key, int timestamp) {
