@@ -13,8 +13,8 @@ class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
         
-       ListNode head(0);
-       ListNode *node = &head;
+       ListNode *head = new ListNode(0);
+       ListNode *node = head;
        
        while (list1 and list2)
        {
@@ -36,6 +36,6 @@ public:
         else
             node->next = list2;
             
-        return head.next;
+        return head->next;
     }
 };
