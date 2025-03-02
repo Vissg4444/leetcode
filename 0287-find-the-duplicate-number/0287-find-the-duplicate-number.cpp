@@ -1,24 +1,13 @@
 class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
-        int slow = 0, fast = 0; // floyd's algoritm
-
+        int i = 0;
         while(1)
         {
-            slow = nums[slow];
-            fast = nums[nums[fast]]; // 2 times faster;
-            if (slow == fast)
-                break; // found the node, in p steps start of the loop
-        }
+            i = abs(nums[i]);
+            if(nums[i] < 0) return i;
+            nums[i] = -nums[i];
 
-        int slow2 = 0;
-
-        while(1)
-        {
-            slow = nums[slow];
-            slow2= nums[slow2];
-            if (slow == slow2)
-                return slow2;
         }
     }
 };
