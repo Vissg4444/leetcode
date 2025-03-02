@@ -1,7 +1,7 @@
 class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
-        int slow = 0, fast = 0;
+        int slow = 0, fast = 0; // floyd's algoritm
 
         while(1)
         {
