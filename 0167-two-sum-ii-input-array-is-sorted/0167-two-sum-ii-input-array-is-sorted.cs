@@ -1,16 +1,17 @@
 public class Solution {
     public int[] TwoSum(int[] nums, int target)
     {
-        for (int i = 0; i < nums.Length; i++)
+        int l = 0, r = nums.Length - 1;
+
+        for(; l < r; )
         {
-            int index = Array.IndexOf(nums, target - nums[i]);
-            if (index != -1 & index != i)
-            {
-                int min_elem = Math.Min(index, i);
-                int max_elem = Math.Max(index, i);
-                return new int[] { min_elem + 1, max_elem + 1 };
-            }
+            if (nums[l] + nums[r] > target)
+                r--;
+            else if (nums[l] + nums[r] < target)
+                l++;
+            else
+                return new int[] {l + 1, r + 1};
         }
-        return new int[] {};
+        return new int[0];
     }
 }
