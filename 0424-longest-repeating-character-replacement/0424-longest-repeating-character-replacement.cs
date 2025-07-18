@@ -6,8 +6,7 @@ public class Solution {
 
         while (r < s.Length)
         {      
-            dic.TryGetValue(s[r], out int count);
-            dic[s[r]] = count + 1;
+            dic[s[r]] = dic.GetValueOrDefault(s[r], 0) + 1;
             r++;
 
             while (dic.Values.Sum() - dic.Values.Max() > k)
