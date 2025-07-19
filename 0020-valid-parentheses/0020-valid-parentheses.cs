@@ -1,6 +1,8 @@
 public class Solution {
     public bool IsValid(string s)
     {
+        if (s.Length % 2 != 0) return false;
+        if (s.Length == 0) return true;
         var dic = new Dictionary<char, char>()
         {
             { ')', '(' },
@@ -11,20 +13,19 @@ public class Solution {
         var stack = new Stack<char>();
         foreach (char c in s)
         {
-            if (stack.Any())
+            if(c=='{' || c == '[' || c == '(')
+                stack.Push(c);
+            else 
             {
-                if (closing.Contains(c))
+                if(stack.Count == 0 )
+                    return false;
+                if (stack.Peek() == dic[c])
                 {
-                    if (stack.Peek() == dic[c])
-                    {
-                        stack.Pop();
-                        continue;
-                    }
-                    else return false;
+                    stack.Pop();
+                    continue;
                 }
-                
+                else return false;
             }
-            stack.Push(c);
         }
         return stack.Any() ? false : true;
     }
