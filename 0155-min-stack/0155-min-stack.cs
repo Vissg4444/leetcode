@@ -3,12 +3,15 @@ public class MinStack {
     int minval;
     public MinStack() {
         minstack = new Stack<(int, int)>();
-        minval = int.MaxValue;
     }
     
     public void Push(int val) {
-        minval = Math.Min(val, !minstack.Any() ? val : minstack.Peek().minval);
-        minstack.Push((minval, val));
+        int min;
+        if (minstack.Count == 0) 
+            min = val;
+        else 
+            min = Math.Min(val, minstack.Peek().minval);
+        minstack.Push((min, val));
     }
     
     public void Pop() {
