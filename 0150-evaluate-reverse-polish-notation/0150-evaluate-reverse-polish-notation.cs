@@ -1,37 +1,31 @@
 public class Solution {
-    public int EvalRPN(string[] tokens)
+    public int expression(int num1, int num2, string oper)
     {
-        var stack = new Stack<int>();
-        foreach (string num in tokens)
+        return oper switch
         {
-            int num1, num2;
-            switch (num)
-            {
-                case ("+"):
-                    num1 = stack.Pop();
-                    num2 = stack.Pop();
-                    stack.Push(num1 + num2);
-                    break;
-                case ("*"):
-                    num1 = stack.Pop();
-                    num2 = stack.Pop();
-                    stack.Push(num1 * num2);
-                    break;
-                case ("-"):
-                    num1 = stack.Pop();
-                    num2 = stack.Pop();
-                    stack.Push(num2 - num1);
-                    break;
-                case ("/"):
-                    num1 = stack.Pop();
-                    num2 = stack.Pop();
-                    stack.Push(num2 / num1);
-                    break;
-                default:
-                    stack.Push(int.Parse(num));
-                    break;
-            }
+            "+" => num1 + num2,
+            "-" => num1 - num2,
+            "*" => num1* num2,
+                "/" => num1 / num2,
+            _ => 0
+        };
+}
+public int EvalRPN(string[] tokens)
+{
+    var stack = new Stack<int>();
+    foreach (string token in tokens)
+    {
+        bool is_num = int.TryParse(token, out int num);
+        if (is_num)
+        {
+            stack.Push(num);
         }
-        return stack.Peek();
+        else
+        {
+            int lastNum = stack.Pop();
+            stack.Push(expression(stack.Pop(), lastNum, token));
+        }
     }
+    return stack.Pop();
+}
 }
