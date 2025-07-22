@@ -5,12 +5,12 @@ public class Solution {
         int max_area = 0;
         for (int i = 0; i < heights.Length; i++)
         {
-            if( stack.Any())
+            if( stack.Count() > 0)
             {
                 int top_height = stack.Peek().heigth;
                 int top_indx = stack.Peek().indx;
                 int min_indx = -1;
-                while (stack.Any() && top_height > heights[i])
+                while (stack.Count() > 0 && top_height > heights[i])
                 {
                     max_area = Math.Max(max_area, (i - top_indx) * top_height);
                     stack.Pop();
@@ -30,7 +30,7 @@ public class Solution {
                 stack.Push((i, heights[i]));
             }
         }
-        while (stack.Any())
+        while (stack.Count() > 0)
         {
             int top_height = stack.Peek().heigth;
             int top_indx = stack.Peek().indx;
