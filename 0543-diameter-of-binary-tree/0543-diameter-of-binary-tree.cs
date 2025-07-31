@@ -12,20 +12,17 @@
  * }
  */
 public class Solution {
+    public int maxval = 0;
     public int DiameterOfBinaryTree(TreeNode root)
     {
-        if (root == null) return 0;
-        int maxval = 0;
-        DFS(root, ref maxval);
+        DFS(root);
         return maxval;
-
-
     }
-    public int DFS(TreeNode root, ref int maxval)
+    public int DFS(TreeNode root)
     {
         if (root == null) return 0;
 
-        int l = DFS(root.left, ref maxval), r = DFS(root.right, ref maxval);
+        int l = DFS(root.left), r = DFS(root.right);
         maxval = Math.Max(maxval, l + r);
         return 1 + Math.Max(l, r);
 
