@@ -14,6 +14,7 @@ class Solution {
 public:
     int good = 0;
     int goodNodes(TreeNode* root) {
+        if(!root) return 0;
         DFS(root, root->val);
         return good;
     }
