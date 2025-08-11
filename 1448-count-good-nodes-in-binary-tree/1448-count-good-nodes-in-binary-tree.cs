@@ -12,20 +12,20 @@
  * }
  */
 public class Solution {
-    public int count = 0;
     public int GoodNodes(TreeNode root) {
-        DFS(root, root.val);
-
-        return count;
+        return DFS(root, root.val);
     }
-    public void DFS(TreeNode root, int maxval)
+    public int DFS(TreeNode root, int maxval)
     {
-        if (root == null) return;
+        if (root == null) return 0;
+        int count = 0;
 
         if (root.val >= maxval) count++;
         maxval = Math.Max(root.val, maxval);
 
-        DFS(root.left, maxval);
-        DFS(root.right, maxval);
+        count += DFS(root.left, maxval);
+        count += DFS(root.right, maxval);
+
+        return count;
     }
 }
