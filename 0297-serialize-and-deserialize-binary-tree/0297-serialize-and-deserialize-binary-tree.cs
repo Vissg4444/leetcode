@@ -17,42 +17,21 @@ public class Codec {
     // Encodes a tree to a single string.
     public string serialize(TreeNode root)
     {
-        dfsSerialize(root);
-        return encoded;
+        if (root == null) return "";
+        return root.val.ToString() + " " + serialize(root.left) + " " + serialize(root.right);
     }
-    public void dfsSerialize(TreeNode root)
-    {
-        if (root == null)
-        {
-            encoded += "N ";
-            return;
-        }
-
-        encoded += root.val.ToString() + " ";
-        dfsSerialize(root.left);
-        dfsSerialize(root.right);
+    public TreeNode deserialize(string data) {
+        string[] tokens = data.Split(' ');
+        var q = new Queue<string>(tokens);
+        return Traverse(q);
+        /*TreeNode root = new TreeNode(tokens.First());
+        TreeNode current = root;
+        foreach (string token in tokens) {
+            if (token == "*")
+        }*/
     }
-
-    // Decodes your encoded data to tree.
-    public TreeNode deserialize(string data)
-    {
-        int indx = 0;
-        return dfsDeserialize(data.Split(), ref indx);
-    }
-
-    public TreeNode dfsDeserialize(string[] data, ref int indx)
-    {
-        if (data[indx] == "N") 
-        {
-            indx++;
-            return null;
-        }
-
-        TreeNode root = new TreeNode(int.Parse(data[indx]));
-        indx++;
-        root.left = dfsDeserialize(data, ref indx);
-        root.right = dfsDeserialize(data, ref indx);
-
-        return root;
+    private TreeNode Traverse(Queue<string> q) {
+        string c = q.Count > 0 ? q.Dequeue() : null;
+        return string.IsNullOrEmpty(c) ? null : new TreeNode(int.Parse(c), Traverse(q), Traverse(q));
     }
 }
