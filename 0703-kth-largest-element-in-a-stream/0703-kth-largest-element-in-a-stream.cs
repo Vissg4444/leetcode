@@ -1,25 +1,22 @@
-public class KthLargest {
-    
-    private PriorityQueue<int,int> minheap = new PriorityQueue<int, int>();
-    private int k;
+public class KthLargest
+{
+
+    PriorityQueue<int, int> minheap;
+    int k;
     public KthLargest(int k, int[] nums)
     {
-        this.minheap = new PriorityQueue<int, int>();
+        minheap = new PriorityQueue<int, int>();
         this.k = k;
         foreach (int num in nums)
         {
-            minheap.Enqueue(num, num);
-            if (minheap.Count > k)
-            {
-                minheap.Dequeue();
-            }
+            Add(num);
         }
     }
 
     public int Add(int val)
     {
         minheap.Enqueue(val, val);
-        if (minheap.Count > k)
+        while (minheap.Count > k)
         {
             minheap.Dequeue();
         }
