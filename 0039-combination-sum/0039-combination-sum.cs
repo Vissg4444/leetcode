@@ -1,25 +1,24 @@
 public class Solution
 {
     public List<IList<int>> result = new List<IList<int>>();
-    public List<IList<int>> CombinationSum(int[] nums, int target)
+    public IList<IList<int>> CombinationSum(int[] nums, int target)
     {
-        Iterate(nums, 0, target, new List<int>(), 0);
+        Iterate(nums, new List<int>(), 0, 0, target);
         return result;
     }
-
-    public void Iterate(int[] nums, int indx, int target, List<int> cur, int sum)
+    public void Iterate(int[] nums, List<int> curr, int i, int sum, int target)
     {
         if (sum == target)
         {
-            result.Add(cur.ToList());
+            result.Add(new List<int>(curr));
             return;
         }
 
-        if (sum > target || indx >= nums.Length) return;
+        if (sum > target || i >= nums.Length) return;
 
-        cur.Add(nums[indx]);
-        Iterate(nums, indx, target, cur, sum + nums[indx]);
-        cur.Remove(cur.Last());
-        Iterate(nums, indx + 1, target, cur, sum);
+        curr.Add(nums[i]);
+        Iterate(nums, curr, i, sum + nums[i], target);
+        curr.Remove(curr.Last());
+        Iterate(nums, curr, i + 1, sum, target);
     }
 }
