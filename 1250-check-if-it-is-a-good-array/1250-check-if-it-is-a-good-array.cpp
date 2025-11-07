@@ -3,19 +3,8 @@ public:
     bool isGoodArray(vector<int>& nums) {
         int prev = nums[0];
         for (int n : nums)
-            prev = extended_gcd(prev, n)[0];
+            prev = __gcd(prev, n);
         return prev == 1;
     }
-    vector<int> extended_gcd(int a, int b)
-    {
-        pair<int, int> r = { a, b }, x = { 1, 0 }, y = { 0, 1 };
-        while ( r.second > 0 )
-        {
-            int q = r.first / r.second;
-            r = { r.second, r.first - q * r.second };
-            x = { x.second, x.first - q * x.second };
-            y = { y.second, y.first - q * y.second };
-        }
-        return { r.first, x.first, y.first };
-    }
+
 };
