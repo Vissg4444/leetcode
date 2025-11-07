@@ -2,14 +2,9 @@ class Solution {
 public:
     bool isGoodArray(vector<int>& nums) {
         int prev = nums[0];
-        for ( int i = 0; i < nums.size(); i++ )
-        {
-            prev = extended_gcd(prev, nums[i])[0];
-        }
-        if ( prev == 1 )
-            return 1;
-        else
-            return 0;
+        for (int n : nums)
+            prev = extended_gcd(prev, n)[0];
+        return prev == 1;
     }
     vector<int> extended_gcd(int a, int b)
     {
