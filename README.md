@@ -11,10 +11,19 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Backtracking
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0022-generate-parentheses](https://github.com/Vissg4444/leetcode/tree/main/0022-generate-parentheses/) | Medium |
 | [0046-permutations](https://github.com/Vissg4444/leetcode/tree/main/0046-permutations/) | Medium |
 | [0090-subsets-ii](https://github.com/Vissg4444/leetcode/tree/main/0090-subsets-ii/) | Medium |
 ## Bit Manipulation
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0090-subsets-ii](https://github.com/Vissg4444/leetcode/tree/main/0090-subsets-ii/) | Medium |
+## String
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0022-generate-parentheses](https://github.com/Vissg4444/leetcode/tree/main/0022-generate-parentheses/) | Medium |
+## Dynamic Programming
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0022-generate-parentheses](https://github.com/Vissg4444/leetcode/tree/main/0022-generate-parentheses/) | Medium |
 <!---LeetCode Topics End-->
