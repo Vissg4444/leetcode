@@ -16,6 +16,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0046-permutations](https://github.com/Vissg4444/leetcode/tree/main/0046-permutations/) | Medium |
 | [0079-word-search](https://github.com/Vissg4444/leetcode/tree/main/0079-word-search/) | Medium |
 | [0090-subsets-ii](https://github.com/Vissg4444/leetcode/tree/main/0090-subsets-ii/) | Medium |
+| [0131-palindrome-partitioning](https://github.com/Vissg4444/leetcode/tree/main/0131-palindrome-partitioning/) | Medium |
 ## Bit Manipulation
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -25,10 +26,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0022-generate-parentheses](https://github.com/Vissg4444/leetcode/tree/main/0022-generate-parentheses/) | Medium |
 | [0079-word-search](https://github.com/Vissg4444/leetcode/tree/main/0079-word-search/) | Medium |
+| [0131-palindrome-partitioning](https://github.com/Vissg4444/leetcode/tree/main/0131-palindrome-partitioning/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0022-generate-parentheses](https://github.com/Vissg4444/leetcode/tree/main/0022-generate-parentheses/) | Medium |
+| [0131-palindrome-partitioning](https://github.com/Vissg4444/leetcode/tree/main/0131-palindrome-partitioning/) | Medium |
 ## Depth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
