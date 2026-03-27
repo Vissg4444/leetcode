@@ -12,6 +12,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Backtracking
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0017-letter-combinations-of-a-phone-number](https://github.com/Vissg4444/leetcode/tree/main/0017-letter-combinations-of-a-phone-number/) | Medium |
 | [0022-generate-parentheses](https://github.com/Vissg4444/leetcode/tree/main/0022-generate-parentheses/) | Medium |
 | [0046-permutations](https://github.com/Vissg4444/leetcode/tree/main/0046-permutations/) | Medium |
 | [0079-word-search](https://github.com/Vissg4444/leetcode/tree/main/0079-word-search/) | Medium |
@@ -24,6 +25,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0017-letter-combinations-of-a-phone-number](https://github.com/Vissg4444/leetcode/tree/main/0017-letter-combinations-of-a-phone-number/) | Medium |
 | [0022-generate-parentheses](https://github.com/Vissg4444/leetcode/tree/main/0022-generate-parentheses/) | Medium |
 | [0079-word-search](https://github.com/Vissg4444/leetcode/tree/main/0079-word-search/) | Medium |
 | [0131-palindrome-partitioning](https://github.com/Vissg4444/leetcode/tree/main/0131-palindrome-partitioning/) | Medium |
@@ -40,4 +42,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0079-word-search](https://github.com/Vissg4444/leetcode/tree/main/0079-word-search/) | Medium |
+## Hash Table
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0017-letter-combinations-of-a-phone-number](https://github.com/Vissg4444/leetcode/tree/main/0017-letter-combinations-of-a-phone-number/) | Medium |
 <!---LeetCode Topics End-->
