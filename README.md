@@ -9,6 +9,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0046-permutations](https://github.com/Vissg4444/leetcode/tree/main/0046-permutations/) | Medium |
 | [0079-word-search](https://github.com/Vissg4444/leetcode/tree/main/0079-word-search/) | Medium |
 | [0090-subsets-ii](https://github.com/Vissg4444/leetcode/tree/main/0090-subsets-ii/) | Medium |
+| [0200-number-of-islands](https://github.com/Vissg4444/leetcode/tree/main/0200-number-of-islands/) | Medium |
 | [0212-word-search-ii](https://github.com/Vissg4444/leetcode/tree/main/0212-word-search-ii/) | Hard |
 ## Backtracking
 | Problem Name | Difficulty |
@@ -43,11 +44,13 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0079-word-search](https://github.com/Vissg4444/leetcode/tree/main/0079-word-search/) | Medium |
+| [0200-number-of-islands](https://github.com/Vissg4444/leetcode/tree/main/0200-number-of-islands/) | Medium |
 | [0211-design-add-and-search-words-data-structure](https://github.com/Vissg4444/leetcode/tree/main/0211-design-add-and-search-words-data-structure/) | Medium |
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0079-word-search](https://github.com/Vissg4444/leetcode/tree/main/0079-word-search/) | Medium |
+| [0200-number-of-islands](https://github.com/Vissg4444/leetcode/tree/main/0200-number-of-islands/) | Medium |
 | [0212-word-search-ii](https://github.com/Vissg4444/leetcode/tree/main/0212-word-search-ii/) | Hard |
 ## Hash Table
 | Problem Name | Difficulty |
@@ -65,4 +68,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0208-implement-trie-prefix-tree](https://github.com/Vissg4444/leetcode/tree/main/0208-implement-trie-prefix-tree/) | Medium |
 | [0211-design-add-and-search-words-data-structure](https://github.com/Vissg4444/leetcode/tree/main/0211-design-add-and-search-words-data-structure/) | Medium |
 | [0212-word-search-ii](https://github.com/Vissg4444/leetcode/tree/main/0212-word-search-ii/) | Hard |
+## Breadth-First Search
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0200-number-of-islands](https://github.com/Vissg4444/leetcode/tree/main/0200-number-of-islands/) | Medium |
+## Union-Find
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0200-number-of-islands](https://github.com/Vissg4444/leetcode/tree/main/0200-number-of-islands/) | Medium |
 <!---LeetCode Topics End-->
