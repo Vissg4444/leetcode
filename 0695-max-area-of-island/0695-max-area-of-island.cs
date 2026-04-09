@@ -1,4 +1,6 @@
+using System.Runtime.CompilerServices;
 public class Solution {
+    [MethodImpl(MethodImplOptions.AggressiveOptimization)]
     public int MaxAreaOfIsland(int[][] grid) {
         int maxarea = 0;
         for (int i = 0; i < grid.Length; i++)
