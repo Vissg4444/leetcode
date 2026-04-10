@@ -3,12 +3,10 @@ public class Solution
 {
     
     Dictionary<Node, Node> cloned = new Dictionary<Node, Node>();
-    
     public Node CloneGraph(Node node)
     {
         return DFS(node);
     }
-    [MethodImpl(MethodImplOptions.AggressiveOptimization)]
     public Node DFS(Node node)
     {
         if (node == null)
