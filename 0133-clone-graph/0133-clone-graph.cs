@@ -1,6 +1,9 @@
+using System.Runtime.CompilerServices;
 public class Solution
 {
+    
     Dictionary<Node, Node> cloned = new Dictionary<Node, Node>();
+    [MethodImpl(MethodImplOptions.AggressiveOptimization)]
     public Node CloneGraph(Node node)
     {
         return DFS(node);
